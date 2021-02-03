@@ -1,0 +1,439 @@
+1)package practise;
+
+
+public class PrimeNumber{
+
+  public static void main(String[] args) 
+{
+
+    int num = 31;
+    boolean count = false;
+    for (int i = 2; i <= num / 2; ++i) 
+   {
+      if (num % i == 0)
+     {
+         flag = true;
+         break;
+      }
+   }
+
+    if (!count)
+      System.out.println(num + " is a prime number.");
+    else
+      System.out.println(num + " is not a prime number.");
+  }
+}
+
+2)package practise;
+
+import java.util.Scanner;
+
+public class PositiveNumber {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter a number: ");
+		int num=sc.nextInt();
+		if(num>0)
+		{
+			System.out.println("it is positive number");
+		}
+		else {
+			System.out.println("it is negative number");
+		}
+
+	}
+
+}
+
+3)package practise;
+
+import java.util.Scanner;
+
+public class FindFactNum {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter a number: ");
+		int num=sc.nextInt();
+		int fact=1;
+		for(int i=1;i<=num;i++)
+		{
+			fact*=i;
+		}
+		System.out.println("factorial is: "+fact);
+		sc.close();
+
+	}
+
+}
+4)package practise;
+
+//import java.util.Scanner;
+
+public class FindFibSeriesNoNum {
+
+	public static void main(String[] args) {
+		
+		
+		int i=0,j=1;
+		System.out.print("series are: "+i+" "+j);
+		for(int k=2;k<20;k++)
+		{
+			int s=i+j;
+			System.out.print(" "+s+" ");
+			i=j;
+			j=s;	
+		}
+			sc.close();
+	}
+
+}
+
+5)package practise;
+
+import java.util.Scanner;
+
+public class FindFibSeries {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter a number upto which you wants series: ");
+		int i=0,j=1;
+		int num=sc.nextInt();
+		System.out.print("series are: "+i+" "+j);
+		for(int k=2;k<num;k++)
+		{
+			int s=i+j;
+			System.out.print(" "+s+" ");
+			i=j;
+			j=s;	
+		}
+			sc.close();
+	}
+
+}
+
+6)package practise;
+
+public class UpperCase {
+
+	public static void main(String[] args) {
+		
+		for(int i=97;i<122;i++)
+		{
+			System.out.println((char)i);
+		}
+		
+
+	}
+
+}
+
+7)package practise;
+
+import java.util.Scanner;
+
+public class SwapUsingTemp {
+
+	public static void main(String[] args) {
+		int i,j,temp;
+		Scanner sc=new Scanner(System.in);
+		i=sc.nextInt();
+		j=sc.nextInt();
+		System.out.println("value before swap: "+i+" "+j);
+		temp=i;
+		i=j;
+		j=temp;
+		System.out.println("value after swap: "+i+" "+j);
+		sc.close();
+	}
+
+}
+
+8)
+
+package practise;
+
+import java.util.Scanner;
+
+public class SwapUsingTemp {
+
+	public static void main(String[] args) {
+		int i,j;
+		Scanner sc=new Scanner(System.in);
+		i=sc.nextInt();
+		j=sc.nextInt();
+		System.out.println("value before swap: "+i+" "+j);
+		i=i+j;
+		j=i-j;
+		i=i-j;
+		System.out.println("value after swap: "+i+" "+j);
+		sc.close();
+	}
+
+}
+
+9)
+package practise;
+
+import java.util.Scanner;
+
+public class Abcpractise {
+
+	public static void main(String[] args) {
+	
+		      Scanner sc=new Scanner(System.in);
+		        char ch = sc.next().charAt(0);
+
+		        if(ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u' )
+		            System.out.println(ch + " is vowel");
+		        else
+		            System.out.println(ch + " is consonant");
+		        sc.close();
+
+		    }
+
+	}
+
+10)
+
+public static void main(String[] args) {
+	
+		      Scanner sc=new Scanner(System.in);
+		
+		      int a=sc.nextInt();
+		      int b=sc.nextInt();
+		      
+		      if(a>b)
+		    	  System.out.println(a+" is greater");
+		      else
+		    	  System.out.println(b+" is greater");
+		      
+		        sc.close();
+
+		    }
+
+11)
+import java.util.Scanner;
+class Reverse
+{
+	public static void main(String args[])
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter the number you want to reverse:");
+		int num=sc.nextInt();
+		System.out.println("reverse number:");
+		while(num!=0)
+		{
+			System.out.print(num%10);
+			num=num/10;
+		}	
+	}
+}
+
+12)
+
+public class Palindrome {
+
+    public static void main(String[] args) {
+
+        int num = 121, reversedInteger = 0, remainder, originalInteger;
+
+        originalInteger = num;
+
+        while( num != 0 )
+        {
+            remainder = num % 10;
+            reversedInteger = reversedInteger * 10 + remainder;
+            num  /= 10;
+        }
+
+        if (originalInteger == reversedInteger)
+            System.out.println(originalInteger + " is a palindrome.");
+        else
+            System.out.println(originalInteger + " is not a palindrome.");
+    }
+}
+
+13)import java.util.Scanner;
+class Prime
+{
+	public static void main(String args[])
+	{
+		int count=0;
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter the number");
+		int num=sc.nextInt();
+		if(num==0 || num==1 || num==2)
+		{
+			System.out.println("invalid input");
+		}
+		else
+		{
+			for(int i=2;i<=num/2;i++)
+			{
+				if(num%i==0)
+				{
+					count++;
+				}
+			}
+		}
+		if(count>1)
+		{
+			System.out.println("it is not a prime number");
+		}
+		else
+		{
+			System.out.println("it is a prime number");
+		}
+	}
+}
+
+14)
+import java.util.Scanner;
+class Primerange
+{
+	public static void main(String args[])
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter first number:");
+		int fnum=sc.nextInt();	
+		System.out.println("Enter second number:");
+		int lnum=sc.nextInt();
+		System.out.println("prime no between " +fnum+" and "+lnum+ " are:");
+		int count;
+		for(int i=fnum;i<=lnum;i++)
+		{
+			count=0;
+			for(int j=1;j<=i;j++)
+			{
+				if(i % j == 0)
+				count++;
+				else
+				continue;
+			}
+			if(count==2)
+			System.out.println(i);
+		}
+		
+	}
+}
+
+15)
+
+public class Armstrong {
+
+    public static void main(String[] args) {
+
+        int number = 371, originalNumber, remainder, result = 0;
+
+        originalNumber = number;
+
+        while (originalNumber != 0)
+        {
+            remainder = originalNumber % 10;
+            result += Math.pow(remainder, 3);
+            originalNumber /= 10;
+        }
+
+        if(result == number)
+            System.out.println(number + " is an Armstrong number.");
+        else
+            System.out.println(number + " is not an Armstrong number.");
+    }
+}
+
+16)
+
+public class Armstrong {
+
+    public static void main(String[] args) {
+
+        int number = 1634, originalNumber, remainder, result = 0, n = 0;
+
+        originalNumber = number;
+
+        for (;originalNumber != 0; originalNumber /= 10, ++n);
+
+        originalNumber = number;
+
+        for (;originalNumber != 0; originalNumber /= 10)
+        {
+            remainder = originalNumber % 10;
+            result += Math.pow(remainder, n);
+        }
+
+        if(result == number)
+            System.out.println(number + " is an Armstrong number.");
+        else
+            System.out.println(number + " is not an Armstrong number.");
+    }
+}
+
+17)
+
+public class Armstrong {
+
+    public static void main(String[] args) {
+
+        int low = 999, high = 99999;
+
+        for(int number = low + 1; number < high; ++number) {
+            int digits = 0;
+            int result = 0;
+            int originalNumber = number;
+
+         
+            while (originalNumber != 0) {
+                originalNumber /= 10;
+                ++digits;
+            }
+
+            originalNumber = number;
+
+            while (originalNumber != 0) {
+                int remainder = originalNumber % 10;
+                result += Math.pow(remainder, digits);
+                originalNumber /= 10;
+            }
+
+            if (result == number)
+                System.out.print(number + " ");
+        }
+    }
+}
+
+18)
+
+import java.util.Scanner;
+class Primerange
+{
+	public static void main(String args[])
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter first number:");
+		int fnum=sc.nextInt();	
+		System.out.println("Enter second number:");
+		int lnum=sc.nextInt();
+		System.out.println("prime no between " +fnum+" and "+lnum+ " are:");
+		int count;
+		for(int i=fnum;i<=lnum;i++)
+		{
+			count=0;
+			for(int j=1;j<=i;j++)
+			{
+				if(i % j == 0)
+				count++;
+				else
+				continue;
+			}
+			if(count==2)
+			System.out.println(i);
+		}
+		
+	}
+}
+
+19)
+
